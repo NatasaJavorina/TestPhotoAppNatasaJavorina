@@ -47,5 +47,16 @@ class AllAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SinglePhotoViewController") as! SinglePhotoViewController
+        vc.photo = album?.photos![indexPath.item]
+        
+
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }

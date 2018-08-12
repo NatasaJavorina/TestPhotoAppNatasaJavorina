@@ -88,6 +88,7 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
         let index = indexPath.row
         
         cell.mainLabel.text = albumsArray[index].title.uppercased()
+        cell.countLabel.text = String(albumsArray.count)
         
         if albumsArray[index].photos?.count != nil {
             
@@ -100,12 +101,13 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 230
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "AllAlbumPhotosViewController") as! AllAlbumPhotosViewController
         vc.album = albumsArray[indexPath.item]
+        vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

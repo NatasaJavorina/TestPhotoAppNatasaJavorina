@@ -20,6 +20,7 @@
 		663C2DEE212083D300BD6ABC /* AlbumsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DED212083D300BD6ABC /* AlbumsListTableViewCell.swift */; };
 		663C2DF02120906B00BD6ABC /* AllAlbumPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DEF2120906B00BD6ABC /* AllAlbumPhotosViewController.swift */; };
 		663C2DF22120911100BD6ABC /* AllPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DF12120911100BD6ABC /* AllPhotosCollectionViewCell.swift */; };
+		663C2DF421209F1B00BD6ABC /* SinglePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DF321209F1B00BD6ABC /* SinglePhotoViewController.swift */; };
 		B9772D78D2AE0CDDD9283E93 /* Pods_TestPhotoAppNatasaJavorina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AFE17474D86F40B7E8D06 /* Pods_TestPhotoAppNatasaJavorina.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		663C2DED212083D300BD6ABC /* AlbumsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListTableViewCell.swift; sourceTree = "<group>"; };
 		663C2DEF2120906B00BD6ABC /* AllAlbumPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAlbumPhotosViewController.swift; sourceTree = "<group>"; };
 		663C2DF12120911100BD6ABC /* AllPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		663C2DF321209F1B00BD6ABC /* SinglePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePhotoViewController.swift; sourceTree = "<group>"; };
 		7DDD5A0AFEADDB31D64F2038 /* Pods-TestPhotoAppNatasaJavorina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoAppNatasaJavorina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoAppNatasaJavorina/Pods-TestPhotoAppNatasaJavorina.debug.xcconfig"; sourceTree = "<group>"; };
 		D09AFE17474D86F40B7E8D06 /* Pods_TestPhotoAppNatasaJavorina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestPhotoAppNatasaJavorina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 			children = (
 				663C2DEA212081FD00BD6ABC /* AlbumsListViewController.swift */,
 				663C2DEF2120906B00BD6ABC /* AllAlbumPhotosViewController.swift */,
+				663C2DF321209F1B00BD6ABC /* SinglePhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				663C2DEE212083D300BD6ABC /* AlbumsListTableViewCell.swift in Sources */,
 				663C2DE021207A1800BD6ABC /* Album.swift in Sources */,
 				663C2DF02120906B00BD6ABC /* AllAlbumPhotosViewController.swift in Sources */,
+				663C2DF421209F1B00BD6ABC /* SinglePhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
