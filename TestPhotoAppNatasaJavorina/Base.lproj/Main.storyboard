@@ -154,5 +154,59 @@
             </objects>
             <point key="canvasLocation" x="920.79999999999995" y="-368.36581709145429"/>
         </scene>
+        <!--All Album Photos View Controller-->
+        <scene sceneID="mgZ-f7-HPn">
+            <objects>
+                <viewController storyboardIdentifier="AllAlbumPhotosViewController" id="Egi-Cz-1h0" customClass="AllAlbumPhotosViewController" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RrQ-7s-hmG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cPQ-g4-IMQ">
+                                <rect key="frame" x="0.0" y="121" width="375" height="546"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ORY-Fe-h6U">
+                                    <size key="itemSize" width="106" height="105"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllPhotosCollectionViewCell" id="MP8-vz-piy" customClass="AllPhotosCollectionViewCell" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="106" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1a-wr-eIK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="105"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="mainImage" destination="y1a-wr-eIK" id="IzP-uU-5oI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Egi-Cz-1h0" id="mr1-Y7-l7W"/>
+                                    <outlet property="delegate" destination="Egi-Cz-1h0" id="6TB-MF-SAM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WPi-8z-fRS"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="cPQ-g4-IMQ" id="37n-cI-5N1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tfh-Cp-nmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.5999999999999" y="-368.36581709145429"/>
+        </scene>
     </scenes>
 </document>
