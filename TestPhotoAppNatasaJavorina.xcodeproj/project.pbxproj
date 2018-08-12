@@ -16,6 +16,7 @@
 		663C2DE021207A1800BD6ABC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DDF21207A1800BD6ABC /* Album.swift */; };
 		663C2DE221207A2200BD6ABC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DE121207A2200BD6ABC /* User.swift */; };
 		663C2DE421207BC500BD6ABC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 663C2DE321207BC500BD6ABC /* Podfile */; };
+		663C2DE721207C5500BD6ABC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DE621207C5500BD6ABC /* DataService.swift */; };
 		B9772D78D2AE0CDDD9283E93 /* Pods_TestPhotoAppNatasaJavorina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AFE17474D86F40B7E8D06 /* Pods_TestPhotoAppNatasaJavorina.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		663C2DDF21207A1800BD6ABC /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		663C2DE121207A2200BD6ABC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		663C2DE321207BC500BD6ABC /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		663C2DE621207C5500BD6ABC /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7DDD5A0AFEADDB31D64F2038 /* Pods-TestPhotoAppNatasaJavorina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoAppNatasaJavorina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoAppNatasaJavorina/Pods-TestPhotoAppNatasaJavorina.debug.xcconfig"; sourceTree = "<group>"; };
 		D09AFE17474D86F40B7E8D06 /* Pods_TestPhotoAppNatasaJavorina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestPhotoAppNatasaJavorina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 		663C2DC92120789400BD6ABC /* TestPhotoAppNatasaJavorina */ = {
 			isa = PBXGroup;
 			children = (
+				663C2DE521207C2400BD6ABC /* DataService */,
 				663C2DDC212079E800BD6ABC /* Model */,
 				663C2DCA2120789400BD6ABC /* AppDelegate.swift */,
 				663C2DCC2120789400BD6ABC /* ViewController.swift */,
@@ -98,6 +101,14 @@
 				663C2DE121207A2200BD6ABC /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		663C2DE521207C2400BD6ABC /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				663C2DE621207C5500BD6ABC /* DataService.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 		9F309BE95C319B23B7C51A83 /* Frameworks */ = {
@@ -240,6 +251,7 @@
 				663C2DDE212079FB00BD6ABC /* Photo.swift in Sources */,
 				663C2DCD2120789400BD6ABC /* ViewController.swift in Sources */,
 				663C2DCB2120789400BD6ABC /* AppDelegate.swift in Sources */,
+				663C2DE721207C5500BD6ABC /* DataService.swift in Sources */,
 				663C2DE221207A2200BD6ABC /* User.swift in Sources */,
 				663C2DE021207A1800BD6ABC /* Album.swift in Sources */,
 			);
