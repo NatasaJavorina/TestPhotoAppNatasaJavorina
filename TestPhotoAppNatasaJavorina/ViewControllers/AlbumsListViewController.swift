@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -47,12 +49,29 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
                     self.albumsArray = albumsArrayTemp!
                     self.tableView.reloadData()
 
+                    for eachAlbum in self.albumsArray {
+                        self.getPhotosWithAlbumID(albumId: eachAlbum.albumId, completion: { (photoArrayTemp) in
+                            eachAlbum.photos = photoArrayTemp
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        })
+                    }
                     
                 }
             }
         }
     }
     
+    func getPhotosWithAlbumID(albumId: Int, completion: @escaping ([Photo]) -> ()) {
+        
+        DataService.getPhotos(albumId: albumId) { (success, photosArray2) in
+            if success {
+                var photosArray = photosArray2!
+                completion(photosArray)
+            }
+        }
+    }
     
 
     // MARK: - Table view data source and delegate methods
@@ -68,6 +87,14 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
 
         let index = indexPath.row
         cell.mainLabel.text = albumsArray[index].title
+        
+        if albumsArray[index].photos?.count != nil {
+            
+            let photosArray: [Photo] = albumsArray[index].photos!
+            let imageURL = photosArray[0].thumbnailUrl
+            cell.thumbImage?.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.png"))
+        }
+        
         return cell
         
     }
