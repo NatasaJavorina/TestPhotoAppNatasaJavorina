@@ -15,9 +15,12 @@
 		663C2DDE212079FB00BD6ABC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DDD212079FB00BD6ABC /* Photo.swift */; };
 		663C2DE021207A1800BD6ABC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DDF21207A1800BD6ABC /* Album.swift */; };
 		663C2DE221207A2200BD6ABC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C2DE121207A2200BD6ABC /* User.swift */; };
+		663C2DE421207BC500BD6ABC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 663C2DE321207BC500BD6ABC /* Podfile */; };
+		B9772D78D2AE0CDDD9283E93 /* Pods_TestPhotoAppNatasaJavorina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AFE17474D86F40B7E8D06 /* Pods_TestPhotoAppNatasaJavorina.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54409FB4B32107D1509190D5 /* Pods-TestPhotoAppNatasaJavorina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoAppNatasaJavorina.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoAppNatasaJavorina/Pods-TestPhotoAppNatasaJavorina.release.xcconfig"; sourceTree = "<group>"; };
 		663C2DC72120789400BD6ABC /* TestPhotoAppNatasaJavorina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPhotoAppNatasaJavorina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		663C2DCA2120789400BD6ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		663C2DCC2120789400BD6ABC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		663C2DDD212079FB00BD6ABC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		663C2DDF21207A1800BD6ABC /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		663C2DE121207A2200BD6ABC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		663C2DE321207BC500BD6ABC /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7DDD5A0AFEADDB31D64F2038 /* Pods-TestPhotoAppNatasaJavorina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoAppNatasaJavorina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoAppNatasaJavorina/Pods-TestPhotoAppNatasaJavorina.debug.xcconfig"; sourceTree = "<group>"; };
+		D09AFE17474D86F40B7E8D06 /* Pods_TestPhotoAppNatasaJavorina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestPhotoAppNatasaJavorina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9772D78D2AE0CDDD9283E93 /* Pods_TestPhotoAppNatasaJavorina.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4203064939EA5ABA81E74C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DDD5A0AFEADDB31D64F2038 /* Pods-TestPhotoAppNatasaJavorina.debug.xcconfig */,
+				54409FB4B32107D1509190D5 /* Pods-TestPhotoAppNatasaJavorina.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		663C2DBE2120789400BD6ABC = {
 			isa = PBXGroup;
 			children = (
+				663C2DE321207BC500BD6ABC /* Podfile */,
 				663C2DC92120789400BD6ABC /* TestPhotoAppNatasaJavorina */,
 				663C2DC82120789400BD6ABC /* Products */,
+				5B4203064939EA5ABA81E74C /* Pods */,
+				9F309BE95C319B23B7C51A83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +100,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9F309BE95C319B23B7C51A83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D09AFE17474D86F40B7E8D06 /* Pods_TestPhotoAppNatasaJavorina.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 663C2DD92120789500BD6ABC /* Build configuration list for PBXNativeTarget "TestPhotoAppNatasaJavorina" */;
 			buildPhases = (
+				E39FF25926D6AAEDFD89F850 /* [CP] Check Pods Manifest.lock */,
 				663C2DC32120789400BD6ABC /* Sources */,
 				663C2DC42120789400BD6ABC /* Frameworks */,
 				663C2DC52120789400BD6ABC /* Resources */,
+				43CB543600B15281915F9252 /* [CP] Embed Pods Frameworks */,
+				39CDFAF605AA794328F4D37C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,11 +171,66 @@
 			files = (
 				663C2DD52120789500BD6ABC /* LaunchScreen.storyboard in Resources */,
 				663C2DD22120789500BD6ABC /* Assets.xcassets in Resources */,
+				663C2DE421207BC500BD6ABC /* Podfile in Resources */,
 				663C2DD02120789400BD6ABC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39CDFAF605AA794328F4D37C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestPhotoAppNatasaJavorina/Pods-TestPhotoAppNatasaJavorina-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43CB543600B15281915F9252 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestPhotoAppNatasaJavorina/Pods-TestPhotoAppNatasaJavorina-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestPhotoAppNatasaJavorina/Pods-TestPhotoAppNatasaJavorina-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E39FF25926D6AAEDFD89F850 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestPhotoAppNatasaJavorina-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		663C2DC32120789400BD6ABC /* Sources */ = {
@@ -298,6 +383,7 @@
 		};
 		663C2DDA2120789500BD6ABC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DDD5A0AFEADDB31D64F2038 /* Pods-TestPhotoAppNatasaJavorina.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +402,7 @@
 		};
 		663C2DDB2120789500BD6ABC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54409FB4B32107D1509190D5 /* Pods-TestPhotoAppNatasaJavorina.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
