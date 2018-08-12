@@ -86,7 +86,8 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumsListTableViewCell", for: indexPath) as! AlbumsListTableViewCell
 
         let index = indexPath.row
-        cell.mainLabel.text = albumsArray[index].title
+        
+        cell.mainLabel.text = albumsArray[index].title.uppercased()
         
         if albumsArray[index].photos?.count != nil {
             
@@ -99,7 +100,7 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 200
     }
     
 }
