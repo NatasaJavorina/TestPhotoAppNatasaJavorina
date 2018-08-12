@@ -55,6 +55,12 @@ class AllAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
         vc.photo = album?.photos![indexPath.item]
         
 
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionFade
+        self.navigationController?.view.layer.add(transition, forKey: nil)
+//        _ = self.navigationController?.popToRootViewController(animated: false)
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
