@@ -57,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="574"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="162" id="Jd5-yM-eGs" customClass="UserTableViewCell" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="162" id="Jd5-yM-eGs" customClass="UserTableViewCell" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jd5-yM-eGs" id="xrL-ng-Krp">
@@ -117,6 +117,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEd-A1-aGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="920.79999999999995" y="590.55472263868069"/>
+        </scene>
+        <!--User Albums View Controller-->
+        <scene sceneID="uWm-h4-gN0">
+            <objects>
+                <viewController storyboardIdentifier="UserAlbumsViewController" id="In6-Wd-GWf" customClass="UserAlbumsViewController" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wb5-7G-Onx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Dl-bB-VV9">
+                                <rect key="frame" x="0.0" y="144" width="375" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TNU-3z-hSQ">
+                                    <size key="itemSize" width="182" height="247"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserAlbumCollectionViewCell" id="W3H-3r-iw9" customClass="UserAlbumCollectionViewCell" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="247"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="247"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXC-Og-CmN">
+                                                    <rect key="frame" x="5" y="3" width="175" height="167"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntt-ap-F91">
+                                                    <rect key="frame" x="11" y="183" width="160" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="mainImage" destination="SXC-Og-CmN" id="HAi-DR-kiC"/>
+                                            <outlet property="titleLabel" destination="Ntt-ap-F91" id="bdd-uk-cia"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="In6-Wd-GWf" id="qer-E2-O70"/>
+                                    <outlet property="delegate" destination="In6-Wd-GWf" id="Jz1-Wv-ob5"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qov-59-P7g">
+                                <rect key="frame" x="38" y="79" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Dl-bB-VV9" firstAttribute="top" secondItem="jTN-U6-Dhk" secondAttribute="top" constant="124" id="9S3-WT-fHN"/>
+                            <constraint firstItem="5Dl-bB-VV9" firstAttribute="bottom" secondItem="jTN-U6-Dhk" secondAttribute="bottom" id="BIN-CG-gCG"/>
+                            <constraint firstItem="5Dl-bB-VV9" firstAttribute="leading" secondItem="jTN-U6-Dhk" secondAttribute="leading" id="GPS-qb-DUK"/>
+                            <constraint firstItem="5Dl-bB-VV9" firstAttribute="trailing" secondItem="jTN-U6-Dhk" secondAttribute="trailing" id="wCd-11-ho0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jTN-U6-Dhk"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="5Dl-bB-VV9" id="cY1-Bl-vaC"/>
+                        <outlet property="userNameLabel" destination="Qov-59-P7g" id="Q03-kI-ezD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4g-sh-UPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.5999999999999" y="590.55472263868069"/>
         </scene>
         <!--Albums-->
         <scene sceneID="428-iL-Vhw">

@@ -73,6 +73,18 @@ class UsersViewController: UIViewController, MDHTMLLabelDelegate, UITableViewDel
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "UserAlbumsViewController") as! UserAlbumsViewController
+        
+        let oneUser = usersArray[indexPath.row]
+        vc.user = oneUser
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 
     
     
