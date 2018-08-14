@@ -10,13 +10,16 @@ import UIKit
 import SDWebImage
 
 
-class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     var albumsArray = [Album]()
-
+    var searchArray = [Album]()
+    
+    
     
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet weak var searchTextfield: UITextField!
     
     
     override func viewDidLoad() {
@@ -34,12 +37,41 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
      // MARK: - Functions
     
     func setInitState() {
-        
-   
-        
+    
         getAlbums()
         
+        searchArray = []
+        
+        searchTextfield.delegate = self
+        searchTextfield.addTarget(self, action: #selector(searchRecordsAsPerText(_ :)), for: .editingChanged)
+        
     }
+    
+    
+    @objc func searchRecordsAsPerText(_ textfield:UITextField) {
+        searchArray.removeAll()
+        
+        if searchTextfield.text?.count != 0 {
+            
+            for cand in albumsArray {
+                let candString: String = cand.title
+                let range = candString.uppercased().range(of: searchTextfield.text!, options: .caseInsensitive, range: nil,   locale: nil)
+                
+                if range != nil {
+                    searchArray.append(cand)
+                    
+                }
+            }
+            
+            albumsArray = searchArray
+        } else {
+            
+            return
+        }
+        tableView.reloadData()
+    }
+    
+    
     
     func getAlbums() {
         DataService.getAlbums { (success, albumsArrayTemp) in
@@ -74,6 +106,18 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
 
+    // MARK: - Actions
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        
+        setInitState()
+        searchTextfield.text = ""
+        tableView.reloadData()
+        
+    }
+    
+    
+    
     // MARK: - Table view data source and delegate methods
     
     
@@ -88,7 +132,6 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
         let index = indexPath.row
         
         cell.mainLabel.text = albumsArray[index].title.uppercased()
-        cell.countLabel.text = String(albumsArray.count)
         
         if albumsArray[index].photos?.count != nil {
             

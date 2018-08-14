@@ -210,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="-145" y="-368"/>
         </scene>
-        <!--Albums List View Controller-->
+        <!--All Albums-->
         <scene sceneID="ChZ-jJ-rlk">
             <objects>
                 <viewController id="Ntr-UX-78q" customClass="AlbumsListViewController" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-kk-abR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AlbumsListTableViewCell" rowHeight="224" id="GZN-ts-iir" customClass="AlbumsListTableViewCell" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target">
@@ -252,14 +252,6 @@
                                                                 <constraint firstAttribute="height" constant="180" id="c9C-z5-H2A"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsJ-0H-a5S">
-                                                            <rect key="frame" x="8" y="155" width="42" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -284,7 +276,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="basicView" destination="DhL-F0-2F5" id="pRF-Fi-R5U"/>
-                                            <outlet property="countLabel" destination="wsJ-0H-a5S" id="Amr-Yv-H06"/>
                                             <outlet property="mainLabel" destination="TXP-cu-MKo" id="bE6-jA-bDq"/>
                                             <outlet property="thumbImage" destination="FVe-kf-fOE" id="UDc-BJ-9HY"/>
                                         </connections>
@@ -295,18 +286,52 @@
                                     <outlet property="delegate" destination="Ntr-UX-78q" id="xyl-1U-hOW"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71T-11-0aS">
+                                <rect key="frame" x="33" y="74" width="296" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY1-d2-B17">
+                                <rect key="frame" x="333" y="73" width="38" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="LsL-TN-eMR"/>
+                                    <constraint firstAttribute="height" constant="32" id="ZiL-P6-Xbj"/>
+                                </constraints>
+                                <state key="normal" image="icClose"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="Ntr-UX-78q" eventType="touchUpInside" id="WIM-eF-MZg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSearch" translatesAutoresizingMaskIntoConstraints="NO" id="VWn-0E-NYv">
+                                <rect key="frame" x="4" y="77" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="FHd-m1-HEP"/>
+                                    <constraint firstAttribute="height" constant="25" id="H4d-cg-5Yc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tyN-kk-abR" firstAttribute="top" secondItem="tNy-w2-XmT" secondAttribute="top" id="7JC-gk-ygD"/>
+                            <constraint firstItem="VWn-0E-NYv" firstAttribute="leading" secondItem="tNy-w2-XmT" secondAttribute="leading" constant="4" id="CRB-5c-ztV"/>
+                            <constraint firstItem="eY1-d2-B17" firstAttribute="leading" secondItem="71T-11-0aS" secondAttribute="trailing" constant="4" id="Fre-f8-O5R"/>
                             <constraint firstItem="tyN-kk-abR" firstAttribute="bottom" secondItem="tNy-w2-XmT" secondAttribute="bottom" id="LbT-aM-466"/>
                             <constraint firstItem="tyN-kk-abR" firstAttribute="trailing" secondItem="tNy-w2-XmT" secondAttribute="trailing" id="Lpx-Aj-kfO"/>
+                            <constraint firstItem="eY1-d2-B17" firstAttribute="top" secondItem="tNy-w2-XmT" secondAttribute="top" constant="9" id="Md2-uQ-cfL"/>
+                            <constraint firstItem="tNy-w2-XmT" firstAttribute="trailing" secondItem="eY1-d2-B17" secondAttribute="trailing" constant="4" id="R6W-Fh-fUw"/>
+                            <constraint firstItem="71T-11-0aS" firstAttribute="top" secondItem="tNy-w2-XmT" secondAttribute="top" constant="10" id="UXp-d9-fZi"/>
                             <constraint firstItem="tyN-kk-abR" firstAttribute="leading" secondItem="tNy-w2-XmT" secondAttribute="leading" id="jLq-K0-SbQ"/>
+                            <constraint firstItem="VWn-0E-NYv" firstAttribute="leading" secondItem="tNy-w2-XmT" secondAttribute="leading" constant="4" id="lFL-vV-rsY"/>
+                            <constraint firstItem="71T-11-0aS" firstAttribute="leading" secondItem="VWn-0E-NYv" secondAttribute="trailing" constant="4" id="mv2-bY-287"/>
+                            <constraint firstItem="71T-11-0aS" firstAttribute="leading" secondItem="VWn-0E-NYv" secondAttribute="trailing" constant="4" id="qdr-6O-xok"/>
+                            <constraint firstItem="tyN-kk-abR" firstAttribute="top" secondItem="71T-11-0aS" secondAttribute="bottom" constant="10" id="s34-yM-w9D"/>
+                            <constraint firstItem="VWn-0E-NYv" firstAttribute="top" secondItem="tNy-w2-XmT" secondAttribute="top" constant="13" id="sMB-2h-80I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tNy-w2-XmT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rv6-vC-eBW"/>
+                    <navigationItem key="navigationItem" title="All Albums" id="rv6-vC-eBW"/>
                     <connections>
+                        <outlet property="searchTextfield" destination="71T-11-0aS" id="kZJ-oV-IAf"/>
                         <outlet property="tableView" destination="tyN-kk-abR" id="WFQ-NM-yE1"/>
                     </connections>
                 </viewController>
@@ -393,4 +418,8 @@
             <point key="canvasLocation" x="2384.8000000000002" y="-368.36581709145429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icClose" width="13" height="13"/>
+        <image name="icSearch" width="19" height="17"/>
+    </resources>
 </document>

@@ -13,7 +13,6 @@ class AlbumsListTableViewCell: UITableViewCell {
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var thumbImage: UIImageView!
     @IBOutlet var basicView: UIView!
-    @IBOutlet var countLabel: UILabel!
 
     
     
