@@ -16,7 +16,6 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
     var searchArray = [Album]()
     
     
-    
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet weak var searchTextfield: UITextField!
