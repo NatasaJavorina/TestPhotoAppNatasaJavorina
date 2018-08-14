@@ -100,5 +100,17 @@ class UserAlbumsViewController: UIViewController, UICollectionViewDelegate, UICo
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AllAlbumPhotosViewController") as! AllAlbumPhotosViewController
+        
+        vc.album = user?.albums![indexPath.item]
+        
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 
 }
