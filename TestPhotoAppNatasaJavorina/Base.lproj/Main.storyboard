@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="-146" y="591"/>
         </scene>
-        <!--All users-->
+        <!--All Users-->
         <scene sceneID="Ep5-cY-wUs">
             <objects>
                 <viewController id="b5f-ji-oZg" customClass="UsersViewController" customModule="TestPhotoAppNatasaJavorina" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,7 +158,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y1u-FK-gvc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="All users" id="ePL-iq-J1g"/>
+                    <navigationItem key="navigationItem" title="All Users" id="ePL-iq-J1g"/>
                     <connections>
                         <outlet property="tableView" destination="5z1-xU-MDc" id="xiC-sg-NZR"/>
                     </connections>
