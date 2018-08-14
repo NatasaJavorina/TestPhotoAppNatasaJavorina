@@ -27,6 +27,9 @@ class SinglePhotoViewController: UIViewController {
     }
     
 
+    // MARK: - Functions
+
+    
     func setInitState() {
         
         
@@ -57,11 +60,24 @@ class SinglePhotoViewController: UIViewController {
         }
     }
     
+    // MARK: - Actions
+
+    
     @IBAction func saveImageButtonTapped(_ sender: UIButton) {
         
          UIImageWriteToSavedPhotosAlbum(mainImage.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+        
+        let imageToShare = [ mainImage.image! ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+        
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
     
     
 }

@@ -474,7 +474,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tQ-SA-MZc">
-                                <rect key="frame" x="126" y="475" width="123" height="58"/>
+                                <rect key="frame" x="10" y="475" width="123" height="58"/>
                                 <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="Hgf-Pz-GbE"/>
@@ -493,26 +493,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5W-DC-2or">
-                                <rect key="frame" x="126" y="548" width="123" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5W-DC-2or">
+                                <rect key="frame" x="242" y="475" width="123" height="58"/>
                                 <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SHARE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="5em-Et-QYC" eventType="touchUpInside" id="apS-c3-LgC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7tQ-SA-MZc" firstAttribute="centerX" secondItem="k2V-mH-Yrn" secondAttribute="centerX" id="9gu-S4-CPA"/>
+                            <constraint firstItem="Q5W-DC-2or" firstAttribute="centerY" secondItem="7tQ-SA-MZc" secondAttribute="centerY" id="9As-us-AeN"/>
+                            <constraint firstItem="Q5W-DC-2or" firstAttribute="trailing" secondItem="are-A2-eVi" secondAttribute="trailing" id="G1V-oA-ojE"/>
                             <constraint firstItem="are-A2-eVi" firstAttribute="leading" secondItem="DJS-KL-oF2" secondAttribute="leading" constant="10" id="Jr7-mT-Zax"/>
                             <constraint firstItem="Nhz-fy-eps" firstAttribute="top" secondItem="DJS-KL-oF2" secondAttribute="top" constant="16" id="RFB-J2-RSy"/>
                             <constraint firstItem="are-A2-eVi" firstAttribute="top" secondItem="DJS-KL-oF2" secondAttribute="top" constant="70" id="ZiC-gk-nLf"/>
+                            <constraint firstItem="Q5W-DC-2or" firstAttribute="height" secondItem="7tQ-SA-MZc" secondAttribute="height" id="a9f-uy-Oi2"/>
                             <constraint firstItem="7tQ-SA-MZc" firstAttribute="top" secondItem="are-A2-eVi" secondAttribute="bottom" constant="30" id="fJA-KJ-lqg"/>
+                            <constraint firstItem="Q5W-DC-2or" firstAttribute="width" secondItem="7tQ-SA-MZc" secondAttribute="width" id="ftw-Ap-7uy"/>
                             <constraint firstItem="are-A2-eVi" firstAttribute="width" secondItem="k2V-mH-Yrn" secondAttribute="width" constant="-20" id="lcH-4U-r6r"/>
                             <constraint firstItem="Nhz-fy-eps" firstAttribute="leading" secondItem="are-A2-eVi" secondAttribute="leading" id="v4q-8M-P4B"/>
                             <constraint firstItem="are-A2-eVi" firstAttribute="top" secondItem="Nhz-fy-eps" secondAttribute="bottom" constant="8" id="w3D-0c-PeJ"/>
                             <constraint firstItem="Nhz-fy-eps" firstAttribute="width" secondItem="are-A2-eVi" secondAttribute="width" id="xiR-nl-IZT"/>
+                            <constraint firstItem="7tQ-SA-MZc" firstAttribute="leading" secondItem="are-A2-eVi" secondAttribute="leading" id="y4t-A8-WPq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DJS-KL-oF2"/>
                     </view>
