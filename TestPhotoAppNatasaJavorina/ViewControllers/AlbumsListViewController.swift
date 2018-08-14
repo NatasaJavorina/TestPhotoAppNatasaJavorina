@@ -26,6 +26,7 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         setInitState()
 
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {
@@ -154,4 +155,16 @@ class AlbumsListViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
