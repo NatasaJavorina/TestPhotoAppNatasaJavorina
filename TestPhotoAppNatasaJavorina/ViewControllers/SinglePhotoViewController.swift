@@ -12,6 +12,7 @@ import SDWebImage
 class SinglePhotoViewController: UIViewController {
 
     @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet var photoTitle: UILabel!
     var photo: Photo?
     
     override func viewDidLoad() {
@@ -31,6 +32,15 @@ class SinglePhotoViewController: UIViewController {
         
         let imageURL = photo?.url
         mainImage.sd_setImage(with: URL(string: imageURL!), placeholderImage: UIImage(named: "placeholder.png"))
+        
+        mainImage.layer.borderWidth = 10
+        mainImage.layer.borderColor = UIColor.purple.cgColor
+        mainImage.layer.masksToBounds = true
+        
+        photoTitle.text = photo?.title ?? ""
+        photoTitle.numberOfLines = 0
+        photoTitle.sizeToFit()
+        photoTitle.textColor = UIColor.purple
         
     }
   
