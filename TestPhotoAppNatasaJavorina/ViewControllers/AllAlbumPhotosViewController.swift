@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class AllAlbumPhotosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class AllAlbumPhotosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     var album: Album?
     
@@ -65,4 +65,13 @@ class AllAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let bounds = UIScreen.main.bounds
+
+        let deviceWidth = bounds.size.width
+        let cellWidth = deviceWidth/3 - 10
+        return CGSize(width: cellWidth, height: cellWidth)
+        
+    }
 }
